@@ -1,0 +1,190 @@
+
+
+<div class="bootstrap-wrapper">
+
+    <div class="container">
+
+
+        <div class="row mt20">
+
+            <div class="col-md-10 offset-md-1">
+
+
+                <mat-card>
+
+                    <h1 style="display: inline; margin-left: 20px;">Product Details</h1>
+                    <td style="margin-top:30px;margin-left:600px; display: inline;">
+
+                        <button [routerLink]="['/admin']" mat-raised-button color="primary">Home</button>
+
+
+                    </td>
+
+
+                </mat-card>
+
+                <mat-card>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div *ngIf="imageSrc!=null">
+                                        <img style="height:100px; width:100px" [src]="imageSrc">
+                                    </div>
+                                </td>
+                                <td>
+                                    <table class="table table-borderless">
+                                        <tr>
+                                            <td>
+                                                <mat-form-field style="margin-left:30px" class="example-full-width"
+                                                    appearance="fill">
+                                                    <mat-label>Product Type</mat-label>
+
+                                                    <input readonly matInput placeholder="Ex. Pizza"
+                                                        value="{{productdata.name}}">
+
+
+
+                                                </mat-form-field>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <mat-form-field style="margin-left:30px" class="example-full-width"
+                                                    appearance="fill">
+
+                                                    <mat-label>Price</mat-label>
+                                                    <input readonly matInput placeholder="Ex. Pizza"
+                                                        value="{{productdata.price}}">
+
+
+                                                </mat-form-field>
+                                            </td>
+                                        </tr>
+
+
+                                    </table>
+                                </td>
+
+
+                                <td>
+                                    <table class="table table-borderless">
+                                        <tr>
+                                            <td>
+                                                <mat-form-field style="margin-left:30px" class="example-full-width"
+                                                    appearance="fill">
+                                                    <mat-label>Product Brand</mat-label>
+
+                                                    <input readonly matInput placeholder="brand"
+                                                        value="{{productdata.brand}}">
+
+
+
+                                                </mat-form-field>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <mat-form-field style="margin-left:30px" class="example-full-width"
+                                                    appearance="fill">
+
+                                                    <mat-label>Size</mat-label>
+                                                    <input readonly matInput placeholder="Ex. Pizza"
+                                                        value="{{productdata.size}}">
+
+
+                                                </mat-form-field>
+                                            </td>
+                                        </tr>
+
+
+                                    </table>
+                                </td>
+
+
+
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <mat-form-field style="margin-left:30px" class="example-full-width"
+                                        appearance="fill">
+                                        <mat-label>Product Review</mat-label>
+
+                                        <input readonly matInput placeholder="brand" value="{{productdata.review}}">
+
+
+
+                                    </mat-form-field>
+                                </td>
+                                <td>
+                                    <mat-form-field style="margin-left:30px" class="example-full-width"
+                                        appearance="fill">
+                                        <mat-label>Product Color</mat-label>
+
+                                        <input readonly matInput placeholder="brand" value="{{productdata.color}}">
+
+
+
+                                    </mat-form-field>
+                                </td>
+
+                                <td>
+                                    <mat-form-field style="margin-left:30px" class="example-full-width"
+                                        appearance="fill">
+                                        <mat-label>In Stock</mat-label>
+
+                                        <input readonly matInput placeholder="brand" value="{{productdata.inStock}}">
+
+
+
+                                    </mat-form-field>
+                                </td>
+
+
+                            </tr>
+
+                            <tr>
+
+
+                                <td>
+
+                                    <mat-form-field style="margin-left:30px" class="example-full-width"
+                                        appearance="fill">
+                                        {{pincode | json}}
+                                        <mat-label>Check Deliverability </mat-label>
+
+                                        <input #fondovalor type="text" matInput placeholder="Enter Your Pin Code">
+
+
+
+                                    </mat-form-field>
+                                  <div style="margin-left: 160px;">
+                                    <button (click)="checkDeliverability()" mat-raised-button
+                                    color="primary">Check</button>
+
+                                  </div>
+                                    
+
+
+                                </td>
+
+
+
+
+                            </tr>
+
+
+
+                        </tbody>
+                    </table>
+
+
+
+                </mat-card>
+
+
+            </div>
+        </div>
+    </div>
+</div>
